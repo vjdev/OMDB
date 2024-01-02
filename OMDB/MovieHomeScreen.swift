@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Combine
+
 struct MovieHomeScreen: View {
     @State var searchText: String = ""
     @State private var searchIsActive = false
@@ -23,25 +23,6 @@ struct MovieHomeScreen: View {
             viewModel.searchText = newValue
             //viewModel.search(searchText: newValue)
         }
-    }
-}
-
-final class MovieHomeViewModel: ObservableObject {
-    @Published var searchText = ""
-    
-    private var cancellable = Set<AnyCancellable>()
-    
-    init() {
-        $searchText
-            .debounce(for: .milliseconds(500), scheduler: DispatchQueue.main)
-            .removeDuplicates()
-            .sink { [weak self] value in
-                self?.search(searchText: value)
-            }.store(in: &cancellable)
-    }
-    
-    func search(searchText: String) {
-        print("Search: \(searchText)")
     }
 }
 
