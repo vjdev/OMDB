@@ -10,7 +10,7 @@ import Foundation
 import Combine
 
 final class MovieSearchService: MovieSearchServiceProtocol {
-    private let apiProvider = APIProvider<WeatherEndpoint>()
+    private let apiProvider = APIProvider<MovieServiceEndpoint>()
     private var cancellables = Set<AnyCancellable>()
     var moviePassthrough = PassthroughSubject<MovieResponse, APIErrors>()
     

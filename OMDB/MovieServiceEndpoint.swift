@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum WeatherEndpoint: EndpointProtocol {
+enum MovieServiceEndpoint: EndpointProtocol {
     case getMovieName(searchString: String)
     
     var baseURL: String {
