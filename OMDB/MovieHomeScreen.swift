@@ -21,7 +21,9 @@ struct MovieHomeScreen: View {
         }
         .onChange(of: searchText) { _, newValue in
             viewModel.searchText = newValue
-            //viewModel.search(searchText: newValue)
+        }
+        .onReceive(viewModel.$movies) { movies in
+            print("Here are the movies: \(movies)")
         }
     }
 }
