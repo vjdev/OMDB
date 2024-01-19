@@ -14,7 +14,8 @@ final class MovieHomeViewModel: ObservableObject {
     
     private var cancellable = Set<AnyCancellable>()
     private let service: MovieSearchServiceProtocol
-   
+    let screenTitle: String = "Movie Finder"
+    
     init(service: MovieSearchServiceProtocol = MovieSearchService()) {
         self.service = service
         $searchText
