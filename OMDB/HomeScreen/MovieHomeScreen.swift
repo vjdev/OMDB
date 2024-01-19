@@ -16,7 +16,9 @@ struct MovieHomeScreen: View {
     var body: some View {
         NavigationView {
             NavigationStack {
-                MovieTileView(viewModel: viewModel)
+                NavigationLink(destination: MovieDetailView(viewModel: viewModel)) {
+                    MovieTileView(viewModel: viewModel)
+                }
                 Spacer()
             }.searchable(text: $searchText, isPresented: $searchIsActive)
                 .navigationTitle(viewModel.screenTitle)
@@ -28,6 +30,18 @@ struct MovieHomeScreen: View {
         .onReceive(viewModel.$movies) { movie in
             showMovieTileView = movie?.title != nil
         }
+    }
+}
+
+struct MovieDetailView: View {
+    @ObservedObject private var viewModel: MovieHomeViewModel
+    
+    init(viewModel: MovieHomeViewModel) {
+        self.viewModel = viewModel
+    }
+    
+    var body: some View {
+        Text("Hello World!")
     }
 }
 

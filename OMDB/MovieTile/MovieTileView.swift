@@ -46,7 +46,3 @@ struct MovieTileView: View {
         }
     }
 }
-
-#Preview {
-    MovieTileView()
-}

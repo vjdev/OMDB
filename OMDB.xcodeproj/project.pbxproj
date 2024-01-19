@@ -116,8 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				C741FD102B455F2000EF7142 /* Info.plist */,
-				C79D59F12B441F7900EFB46C /* OMDBApp.swift */,
 				C7A9046E2B5AEAEA003129F6 /* HomeScreen */,
+				C7A9046B2B5AEA8B003129F6 /* MovieTile */,
+				C79D59F12B441F7900EFB46C /* OMDBApp.swift */,
 				C741FCF62B453B9E00EF7142 /* EndpointProtocol.swift */,
 				C741FCF72B453B9E00EF7142 /* MovieServiceEndpoint.swift */,
 				C741FCFD2B453BA700EF7142 /* APIErrors.swift */,
@@ -125,7 +126,6 @@
 				C741FCFC2B453BA700EF7142 /* APIProviderErrors.swift */,
 				C741FD032B453BAF00EF7142 /* MovieSearchService.swift */,
 				C741FD022B453BAF00EF7142 /* MovieSearchServiceProtocol.swift */,
-				C7A9046B2B5AEA8B003129F6 /* MovieTile */,
 				C79D59F52B441F7A00EFB46C /* Assets.xcassets */,
 				C79D59F72B441F7A00EFB46C /* Preview Content */,
 			);
