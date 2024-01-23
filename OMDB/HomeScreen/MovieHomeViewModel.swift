@@ -36,6 +36,10 @@ final class MovieHomeViewModel: ObservableObject {
     private func search(searchText: String) {
         service.searchMovie(with: searchText)
     }
+    
+    var showTile: Bool {
+        movies?.title != nil
+    }
 }
 
 // MARK: - MovieResponse

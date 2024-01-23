@@ -15,13 +15,9 @@ struct MovieTileView: View {
         self.viewModel = viewModel
         movieTileViewModel = MovieTileViewModel(viewModel: viewModel)
     }
-    
-    private func showTile() -> Bool {
-        viewModel.movies?.title != nil
-    }
-    
+        
     var body: some View {
-        if showTile() {
+        if viewModel.showTile {
             movieTileView
                 .padding(20)
         } else {

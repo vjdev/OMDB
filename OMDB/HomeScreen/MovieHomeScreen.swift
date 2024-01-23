@@ -33,18 +33,6 @@ struct MovieHomeScreen: View {
     }
 }
 
-struct MovieDetailView: View {
-    @ObservedObject private var viewModel: MovieHomeViewModel
-    
-    init(viewModel: MovieHomeViewModel) {
-        self.viewModel = viewModel
-    }
-    
-    var body: some View {
-        Text("Hello World!")
-    }
-}
-
 #Preview {
     MovieHomeScreen()
 }
