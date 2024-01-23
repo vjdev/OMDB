@@ -22,7 +22,7 @@ struct MovieHomeScreen: View {
                 Spacer()
             }.searchable(text: $searchText, isPresented: $searchIsActive)
                 .navigationTitle(viewModel.screenTitle)
-                .navigationBarTitleDisplayMode(.large)
+                .navigationBarTitleDisplayMode(.inline)
         }
         .onChange(of: searchText) { _, newValue in
             viewModel.searchText = newValue

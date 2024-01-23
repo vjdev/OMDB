@@ -17,11 +17,22 @@ struct MovieDetailView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             posterImageView
-            Text(movieTitleViewModel.title)
+            HStack {
+                titleView
+                yearReleasedView
+                Spacer()
+            }
+            HStack {
+                genreView
+                    .padding(.trailing, 16)
+                durationView
+                Spacer()
+            }
+            movieDescriptionView
             Spacer()
-        }
+        }.padding(.leading, 16)
     }
     
     private var posterImageView: some View {
@@ -34,5 +45,25 @@ struct MovieDetailView: View {
                 Color.gray.opacity(0.1)
             }
         }
+    }
+    
+    private var titleView: some View {
+        Text(movieTitleViewModel.title)
+    }
+    
+    private var yearReleasedView: some View {
+        Text("(\(viewModel.movies?.year ?? ""))")
+    }
+    
+    private var genreView: some View {
+        Text(viewModel.movies?.genre ?? "")
+    }
+    
+    private var movieDescriptionView: some View {
+        Text(viewModel.movies?.plot ?? "")
+    }
+    
+    private var durationView: some View {
+        Text(viewModel.movies?.runtime ?? "")
     }
 }
