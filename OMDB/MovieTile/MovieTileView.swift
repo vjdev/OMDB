@@ -9,7 +9,8 @@ import SwiftUI
 
 struct MovieTileView: View {
     @ObservedObject private var viewModel: MovieHomeViewModel
-    private let movieTileViewModel: MovieTileViewModel!
+    let movieTileViewModel: MovieTileViewModel!
+    
     init(viewModel: MovieHomeViewModel) {
         self.viewModel = viewModel
         movieTileViewModel = MovieTileViewModel(viewModel: viewModel)
@@ -21,28 +22,10 @@ struct MovieTileView: View {
     
     var body: some View {
         if showTile() {
-            showMovieTileView()
+            movieTileView
+                .padding(20)
         } else {
             EmptyView()
-        }
-    }
-    
-    @ViewBuilder
-    private func showMovieTileView() -> some View {
-        HStack {
-            HStack {
-                Image(movieTileViewModel.posterImage)
-                VStack(alignment: .leading) {
-                    Text(movieTileViewModel.title)
-                    Text(movieTileViewModel.imdbRating)
-                        .padding(2)
-                        .background(Color.gray)
-                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-                    Text(movieTileViewModel.genre)
-                }
-            }
-            .padding(.leading, 16)
-            Spacer()
         }
     }
 }

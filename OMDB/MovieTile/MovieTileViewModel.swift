@@ -17,8 +17,8 @@ final class MovieTileViewModel {
     var title: String {
         viewModel.movies?.title ?? ""
     }
-    var posterImage: String {
-        viewModel.movies?.poster ?? ""
+    var posterImage: URL? {
+        URL(string: viewModel.movies?.poster ?? "")
     }
     var genre: String {
         viewModel.movies?.genre ?? ""

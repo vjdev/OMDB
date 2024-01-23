@@ -24,6 +24,7 @@
 		C79D5A1C2B44703500EFB46C /* MovieHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D5A1B2B44703500EFB46C /* MovieHomeViewModel.swift */; };
 		C7A9046A2B5AEA78003129F6 /* MovieTileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A904692B5AEA78003129F6 /* MovieTileViewModel.swift */; };
 		C7A9046D2B5AEAB3003129F6 /* MovieTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A9046C2B5AEAB3003129F6 /* MovieTileView.swift */; };
+		C7B308AE2B5FDF0600B058DA /* MovieTileView+Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B308AD2B5FDF0600B058DA /* MovieTileView+Views.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		C79D5A1B2B44703500EFB46C /* MovieHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieHomeViewModel.swift; sourceTree = "<group>"; };
 		C7A904692B5AEA78003129F6 /* MovieTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTileViewModel.swift; sourceTree = "<group>"; };
 		C7A9046C2B5AEAB3003129F6 /* MovieTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTileView.swift; sourceTree = "<group>"; };
+		C7B308AD2B5FDF0600B058DA /* MovieTileView+Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovieTileView+Views.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			children = (
 				C7A904692B5AEA78003129F6 /* MovieTileViewModel.swift */,
 				C7A9046C2B5AEAB3003129F6 /* MovieTileView.swift */,
+				C7B308AD2B5FDF0600B058DA /* MovieTileView+Views.swift */,
 			);
 			path = MovieTile;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				C79D5A1C2B44703500EFB46C /* MovieHomeViewModel.swift in Sources */,
 				C741FD052B453BAF00EF7142 /* MovieSearchServiceProtocol.swift in Sources */,
 				C741FD012B453BA700EF7142 /* APIProvider.swift in Sources */,
+				C7B308AE2B5FDF0600B058DA /* MovieTileView+Views.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
