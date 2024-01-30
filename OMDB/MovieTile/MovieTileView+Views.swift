@@ -21,9 +21,7 @@ extension MovieTileView {
     
     private var imdbRatingView: some View {
         Text(movieTileViewModel.imdbRating)
-            .padding(2)
-            .background(Color.gray)
-            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            .modifier(ImdbRatingViewModifier())
     }
     
     private var genreView: some View {
@@ -45,6 +43,15 @@ extension MovieTileView {
                 movieDescriptionView
                 .padding(.leading, 16)
                 Spacer()
+        }
+    }
+    
+    struct ImdbRatingViewModifier: ViewModifier {
+        func body(content: Content) -> some View {
+            content
+                .padding(2)
+                .background(Color.gray)
+                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
         }
     }
 }
