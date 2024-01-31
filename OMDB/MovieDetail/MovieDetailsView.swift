@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MovieDetailView: View {
-    @ObservedObject private var viewModel: MovieHomeViewModel
-    private var movieTitleViewModel: MovieTileViewModel!
+    @ObservedObject private (set) var viewModel: MovieHomeViewModel
+    private (set) var movieTitleViewModel: MovieTileViewModel!
     
     init(viewModel: MovieHomeViewModel) {
         self.viewModel = viewModel
@@ -45,25 +45,5 @@ struct MovieDetailView: View {
                 Color.gray.opacity(0.1)
             }
         }
-    }
-    
-    private var titleView: some View {
-        Text(movieTitleViewModel.title)
-    }
-    
-    private var yearReleasedView: some View {
-        Text("(\(viewModel.movies?.year ?? ""))")
-    }
-    
-    private var genreView: some View {
-        Text(viewModel.movies?.genre ?? "")
-    }
-    
-    private var movieDescriptionView: some View {
-        Text(viewModel.movies?.plot ?? "")
-    }
-    
-    private var durationView: some View {
-        Text(viewModel.movies?.runtime ?? "")
     }
 }
